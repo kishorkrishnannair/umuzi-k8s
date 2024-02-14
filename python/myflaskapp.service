@@ -1,0 +1,11 @@
+[Unit]
+Description=My Flask App
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/ubuntu/umuzi-k8s/python
+ExecStart=/home/ubuntu/umuzi-k8s/python/venv/bin/python /home/ubuntu/umuzi-k8s/python/app.py
+
+[Install]
+WantedBy=multi-user.target
